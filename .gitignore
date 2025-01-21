@@ -1,0 +1,23 @@
+# Local Terraform state files
+*.tfstate
+*.tfstate.*
+
+# Crash log files
+crash.log
+
+# Terraform CLI configuration files
+.terraform/
+
+# Terraform plan output files
+*.tfplan
+
+# .terraform.lock.hcl file is for dependency locking
+.terraform.lock.hcl
+
+# IDE/Editor-specific files
+.vscode/
+.idea/
+
+# Operating system-specific files
+.DS_Store
+Thumbs.db

@@ -15,7 +15,6 @@ variable "environment" {
         error_message = "Invalid environment"
     }
 }
-
 variable "bucket_name" {
     description = "Target S3 bucket name"
     type = string
@@ -38,7 +37,7 @@ variable "web_error_file_name" {
     description = "File name of the error file used for the static web"
     type = string
     validation {
-        condition = endswith(".html", var.web_error_file_name)
+        condition = endswith(var.web_error_file_name, ".html")
         error_message = "The error file must be a valid HTML file"
     }
 }

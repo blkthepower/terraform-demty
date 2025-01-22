@@ -1,4 +1,3 @@
-
 resource "aws_s3_bucket" "main_bucket"{
 	bucket = "${var.bucket_name}-${var.environment}"
 	tags = {
@@ -36,7 +35,7 @@ resource "aws_s3_bucket_policy" "main_bucket_policy" {
 
 resource "aws_s3_object" "web_index" {
 	bucket = aws_s3_bucket.main_bucket.id
-	key = var.web_tml.name
+	key = var.web_html.name
     source = var.web_html.path
 	content_type = "text/html"
 	etag = filemd5(var.web_html.path)
